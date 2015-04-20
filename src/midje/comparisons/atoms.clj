@@ -1,12 +1,8 @@
 (ns midje.comparisons.atoms
+  (:use marick.clojure.core)
   (:require [midje.comparisons.reasons :refer :all]))
 
 ;; TODO: Put these in a clojure commons
-(defn big-decimal? [x]
-  (instance? java.math.BigDecimal x))
-
-(defn regex? [x]
-  (instance? java.util.regex.Pattern x))
 
 (defn differences [actual expected]
   ;; BigDecimal check required because = is broken until Clojure 1.6.
