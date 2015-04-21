@@ -1,0 +1,37 @@
+plain functions
+checkers (simple failures
+
+=not=> checkers (simple failures)
+checkers (to produce error-laden failures)
+
+=not=> checkers (to produce error-laden failures)
+collection checkers
+=not=> collection checkers
+
+
+every-checker
+=not= (every-checker)
+
+
+regex
+not regex
+
+
+in-any-order - basic equality
+gaps-ok - basic equality
+
+in-any-order - matching functions
+
+
+Getting the name of a function from itself - always safe?
+
+
+
+
+
+Store fact failures in namespace.
+  Pass in map to functions
+           :expected-result-form '(just a 2),
+           :expected-result (just a 2),
+           :actual-result 333
+

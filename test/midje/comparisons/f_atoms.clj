@@ -19,4 +19,8 @@
     (subject/differences #"a*b+" #"a*b+") => []
     (let [[{:keys [actual expected]}] (subject/differences #"a*b+" #"a*b")]
       (str actual) => "a*b+"
-      (str expected) => "a*b")))
+      (str expected) => "a*b"))
+
+  (future-fact "plain functions, when accepted, are used in comparison"
+    (subject/differences 1 odd?) => []
+    (subject/differences 1 even?) => [(->FalseFunction 1 odd? "core.odd?")]))
